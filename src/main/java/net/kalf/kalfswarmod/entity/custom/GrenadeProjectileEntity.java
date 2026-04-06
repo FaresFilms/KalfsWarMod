@@ -1,7 +1,7 @@
-package net.kalf.mytestmod.entity.custom;
+package net.kalf.kalfswarmod.entity.custom;
 
-import net.kalf.mytestmod.entity.ModEntities;
-import net.kalf.mytestmod.item.ModItems;
+import net.kalf.kalfswarmod.entity.ModEntities;
+import net.kalf.kalfswarmod.item.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;

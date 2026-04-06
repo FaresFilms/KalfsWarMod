@@ -1,6 +1,6 @@
-package net.kalf.mytestmod.item;
+package net.kalf.kalfswarmod.item;
 
-import net.kalf.mytestmod.MyTestMod;
+import net.kalf.kalfswarmod.KalfsWarMod;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -11,7 +11,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
-            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MyTestMod.MODID);
+            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, KalfsWarMod.MODID);
 
     public static final RegistryObject<CreativeModeTab> MY_TAB = CREATIVE_MODE_TABS.register("my_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.STEEL_INGOT.get()))

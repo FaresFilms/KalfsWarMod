@@ -1,7 +1,7 @@
-package net.kalf.mytestmod.entity;
+package net.kalf.kalfswarmod.entity;
 
-import net.kalf.mytestmod.MyTestMod;
-import net.kalf.mytestmod.entity.custom.GrenadeProjectileEntity;
+import net.kalf.kalfswarmod.KalfsWarMod;
+import net.kalf.kalfswarmod.entity.custom.GrenadeProjectileEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -12,7 +12,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModEntities {
 
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
-            DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, MyTestMod.MODID);
+            DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, KalfsWarMod.MODID);
 
     public static final RegistryObject<EntityType<GrenadeProjectileEntity>> GRENADE_PROJECTILE =
             ENTITY_TYPES.register("grenade_projectile", () -> EntityType.Builder.<GrenadeProjectileEntity>of(GrenadeProjectileEntity::new, MobCategory.MISC)

@@ -1,6 +1,6 @@
-package net.kalf.mytestmod.item;
+package net.kalf.kalfswarmod.item;
 
-import net.kalf.mytestmod.entity.custom.GrenadeProjectileEntity;
+import net.kalf.kalfswarmod.entity.custom.GrenadeProjectileEntity;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;

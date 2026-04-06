@@ -1,6 +1,6 @@
-package net.kalf.mytestmod.item;
+package net.kalf.kalfswarmod.item;
 
-import net.kalf.mytestmod.MyTestMod;
+import net.kalf.kalfswarmod.KalfsWarMod;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -9,7 +9,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
-            DeferredRegister.create(ForgeRegistries.ITEMS, MyTestMod.MODID);
+            DeferredRegister.create(ForgeRegistries.ITEMS, KalfsWarMod.MODID);
 
     public static final RegistryObject<Item> STEEL_INGOT = ITEMS.register("steel_ingot",
             () -> new Item(new Item.Properties()));

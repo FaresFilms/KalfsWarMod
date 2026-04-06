@@ -1,8 +1,8 @@
-package net.kalf.mytestmod;
+package net.kalf.kalfswarmod;
 import com.mojang.logging.LogUtils;
-import net.kalf.mytestmod.entity.ModEntities;
-import net.kalf.mytestmod.item.ModCreativeModeTabs;
-import net.kalf.mytestmod.item.ModItems;
+import net.kalf.kalfswarmod.entity.ModEntities;
+import net.kalf.kalfswarmod.item.ModCreativeModeTabs;
+import net.kalf.kalfswarmod.item.ModItems;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -19,14 +19,14 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(MyTestMod.MODID)
-public class MyTestMod {
+@Mod(KalfsWarMod.MODID)
+public class KalfsWarMod {
     // Define mod id in a common place for everything to reference
-    public static final String MODID = "my_test_mod";
+    public static final String MODID = "kalfs_war_mod";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public MyTestMod(FMLJavaModLoadingContext context)
+    public KalfsWarMod(FMLJavaModLoadingContext context)
     {
         IEventBus modEventBus = context.getModEventBus();
 
