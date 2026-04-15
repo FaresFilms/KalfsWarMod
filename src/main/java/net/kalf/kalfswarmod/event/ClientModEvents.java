@@ -14,5 +14,6 @@ public class ClientModEvents {
     @SubscribeEvent
     public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
         event.registerEntityRenderer(ModEntities.SMALL_BULLET_PROJECTILE.get(), ThrownItemRenderer::new);
+        event.registerEntityRenderer(ModEntities.LARGE_BULLET_PROJECTILE.get(), ThrownItemRenderer::new);
     }
 }

@@ -1,5 +1,6 @@
 package net.kalf.kalfswarmod.network.packet;
 
+import net.kalf.kalfswarmod.item.BaseGunItem;
 import net.kalf.kalfswarmod.item.ModItems;
 import net.kalf.kalfswarmod.sound.ModSounds;
 import net.minecraft.core.particles.ParticleTypes;
@@ -33,25 +34,32 @@ public class ShootGunC2SPacket {
 
             if (player != null) {
                 var level = player.serverLevel();
-                if (player.getMainHandItem().getItem() == ModItems.AK47.get()) {
-                    boolean hasAmmo = player.getAbilities().instabuild || player.getInventory().contains(new ItemStack(ModItems.SMALL_BULLET.get()));
+                if (player.getMainHandItem().getItem() instanceof BaseGunItem gun) {
+                    boolean hasAmmo = player.getAbilities().instabuild || player.getInventory().contains(new ItemStack(gun.getAmmoType()));
 
                     if (hasAmmo) {
                         level.playSound(null, player.getX(), player.getY(), player.getZ(),
                                 ModSounds.GUN_SHOT_1.get(), SoundSource.PLAYERS, 4.0f, 1.0f);
 
-                        net.kalf.kalfswarmod.entity.custom.SmallBulletProjectileEntity bullet = new net.kalf.kalfswarmod.entity.custom.SmallBulletProjectileEntity(level, player);
-
-                        bullet.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0f, 4.0f, 0.5f);
-                        level.addFreshEntity(bullet);
+                        if (gun.getAmmoType() == ModItems.SMALL_BULLET.get()) {
+                            net.kalf.kalfswarmod.entity.custom.SmallBulletProjectileEntity bullet = new net.kalf.kalfswarmod.entity.custom.SmallBulletProjectileEntity(level, player);
+                            bullet.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0f, gun.getBulletSpeed(), 0.5f);
+                            bullet.setDamage(gun.getDamage());
+                            level.addFreshEntity(bullet);
+                        } else if (gun.getAmmoType() == ModItems.LARGE_BULLET.get()) {
+                            net.kalf.kalfswarmod.entity.custom.LargeBulletProjectileEntity bullet = new net.kalf.kalfswarmod.entity.custom.LargeBulletProjectileEntity(level, player);
+                            bullet.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0f, gun.getBulletSpeed(), 0.2f);
+                            bullet.setDamage(gun.getDamage());
+                            level.addFreshEntity(bullet);
+                        }
 
                         if (!player.getAbilities().instabuild) {
-                            int slot = player.getInventory().findSlotMatchingItem(new ItemStack(ModItems.SMALL_BULLET.get()));
+                            int slot = player.getInventory().findSlotMatchingItem(new ItemStack(gun.getAmmoType()));
                             if (slot != -1) {
                                 player.getInventory().getItem(slot).shrink(1);
                             }
                         }
-                        player.getCooldowns().addCooldown(ModItems.AK47.get(), 3);
+                        player.getCooldowns().addCooldown(gun, gun.getFireRate());
                     }
                 }
 

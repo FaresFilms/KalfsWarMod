@@ -19,5 +19,23 @@
     "sounds": [
       "kalfs_war_mod:gun_shot_1"
     ]
+  },
+  "bullet_ricochet": {
+    "category": "player",
+    "subtitle": "sounds.kalfswarmod.bullet_ricochet",
+    "sounds": [
+      "kalfs_war_mod:bullet_ricochet-01",
+      "kalfs_war_mod:bullet_ricochet-02",
+      "kalfs_war_mod:bullet_ricochet-03",
+      "kalfs_war_mod:bullet_ricochet-04",
+      "kalfs_war_mod:bullet_ricochet-05",
+      "kalfs_war_mod:bullet_ricochet-06",
+      "kalfs_war_mod:bullet_ricochet-07",
+      "kalfs_war_mod:bullet_ricochet-08",
+      "kalfs_war_mod:bullet_ricochet-09",
+      "kalfs_war_mod:bullet_ricochet-10",
+      "kalfs_war_mod:bullet_ricochet-11",
+      "kalfs_war_mod:bullet_ricochet-12"
+    ]
   }
 }

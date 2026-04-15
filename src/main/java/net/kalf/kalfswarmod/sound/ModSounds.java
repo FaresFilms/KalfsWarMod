@@ -18,6 +18,7 @@ public class ModSounds {
     public static final RegistryObject<SoundEvent> MEDIUM_EXPLOSION = registerSoundEvents("medium_explosion");
     public static final RegistryObject<SoundEvent> LARGE_EXPLOSION = registerSoundEvents("large_explosion");
     public static final RegistryObject<SoundEvent> MASSIVE_EXPLOSION = registerSoundEvents("massive_explosion");
+    public static final RegistryObject<SoundEvent> BULLET_RICOCHET = registerSoundEvents("bullet_ricochet");
     public static final RegistryObject<SoundEvent> GUN_SHOT_1 = registerSoundEvents("gun_shot_1");
 
     private static RegistryObject<SoundEvent> registerSoundEvents(String name) {

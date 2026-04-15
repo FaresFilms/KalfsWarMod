@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "kalfs_war_mod:item/bullet_entity"
+    "layer0": "kalfs_war_mod:item/hunting_rifle"
   }
 }
